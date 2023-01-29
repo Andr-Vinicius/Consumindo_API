@@ -3,6 +3,10 @@ import { Switch } from 'react-router-dom'
 import { toast } from "react-toastify";
 
 import Login from '../pages/Login';
+import Aluno from '../pages/Aluno';
+import Alunos from '../pages/Alunos';
+import Fotos from '../pages/Fotos';
+import Register from '../pages/Register';
 import Error404 from '../pages/Error404';
 
 import MyRoute from "./MyRoute";
@@ -16,7 +20,12 @@ export default function Routes(){
   return(
     <Switch> {/* Encerra a busca pela rota quando ela é encontrada */}
       {/* Esse MyRout é uma rota personalizada */}
-      <MyRoute exact path='/' component={Login}/>
+      <MyRoute exact path='/' component={Alunos} isClosed={false}/>
+      <MyRoute exact path='/aluno/:id' component={Aluno} isClosed/>
+      <MyRoute exact path='/aluno/' component={Aluno} isClosed/>
+      <MyRoute exact path='/fotos/:id' component={Fotos} isClosed/>
+      <MyRoute exact path='/login/' component={Login} isClosed={false}/>
+      <MyRoute exact path='/register/' component={Register} isClosed={false}/>
       <MyRoute path='*' component={Error404}/>
     </Switch>
   )
