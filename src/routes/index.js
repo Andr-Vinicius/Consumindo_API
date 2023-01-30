@@ -21,7 +21,8 @@ export default function Routes(){
     <Switch> {/* Encerra a busca pela rota quando ela é encontrada */}
       {/* Esse MyRout é uma rota personalizada */}
       <MyRoute exact path='/' component={Alunos} isClosed={false}/>
-      <MyRoute exact path='/aluno/:id' component={Aluno} isClosed/>
+      <MyRoute exact path='/aluno/:id/edit' component={Aluno} isClosed/>
+      <MyRoute exact path='/aluno/:id/delete' component={Aluno} isClosed/>
       <MyRoute exact path='/aluno/' component={Aluno} isClosed/>
       <MyRoute exact path='/fotos/:id' component={Fotos} isClosed/>
       <MyRoute exact path='/login/' component={Login} isClosed={false}/>

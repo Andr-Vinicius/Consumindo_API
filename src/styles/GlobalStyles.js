@@ -30,27 +30,34 @@ export default createGlobalStyle` // Estilo Global que está revestindo o App.js
 `;
 
 export const Container = styled.section`
-  max-width: 400px;
-  height: 200px;
+  max-width: 490px;
   background-color: ${props => props.theme.colors.containerBackground};
   margin: 30px auto;
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
   button{
     cursor: pointer;
     display: block;
-    margin-top: 3em;
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    width: 80px;
-    height: 25px;
+    width: 85px;
+    height: 28px;
     border-radius: 5px;
     border: none;
     background-color: ${props => props.theme.colors.background};
     color: white;
+    font-weight: bold;
+    transition: all 200ms;
     :hover{
       background-color: ${props => props.theme.colors.hoverStyle};
+      color: ${props => props.theme.colors.primary};
+      font-weight: bold;
+      transform: scale(1.1);
+      transition: all 0.4s;  
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
   }
 `;

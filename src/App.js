@@ -29,7 +29,7 @@ function App() {
             <GlobalStyles />
             {/* Configuração dos pop-ups com mensagens e tipos especificos, 
             configurei para 1000 milissegundos o  tempo de fechamento e para não pausar quando o mouse estiver em cima */}
-            <ToastContainer autoClose={1000} pauseOnHover={false} className="toast-container"/> 
+            <ToastContainer autoClose={2100} pauseOnHover={false} className="toast-container"/> 
           </ThemeProvider>
         </Router>
       </Provider>

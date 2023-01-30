@@ -7,9 +7,9 @@ export default reducers => {
   // Armazenamento do estado no Local Storage do navegador (por padrão)
   const persistedReducers = persistReducer(
     {
-      key: 'Nome_da_Aplicacao',
+      key: 'CONSUMO_API',
       storage,
-      whitelist: ['exampleReducer'], // Pode ir adicionando outros reducers
+      whitelist: ['auth'], // Pode ir adicionando outros reducers
     }, 
     reducers
   );
