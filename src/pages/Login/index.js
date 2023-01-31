@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Title, Paragrafo} from './styled';
+import {Title} from './styled';
 import { Container } from '../../styles/GlobalStyles';
 import { Form } from '../Register/styled';
 import Loading from '../../components/Loading';

@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch } from 'react-router-dom'
-import { toast } from "react-toastify";
 
 import Login from '../pages/Login';
 import Aluno from '../pages/Aluno';
