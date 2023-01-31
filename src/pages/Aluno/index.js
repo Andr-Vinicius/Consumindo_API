@@ -57,7 +57,7 @@ export default function Aluno({match}){
       }
     }
     getAluno();
-  }, []);
+  }, [id]);
 
   async function handleSubmit(e){
     e.preventDefault();
