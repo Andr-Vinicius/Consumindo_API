@@ -27,7 +27,7 @@ export default function Header(){
 
       {isLoggedIn ? (
         <Link onClick={handleLogout} to="/logout">
-        <FaPowerOff className="icon" size={20} color={'white'} />
+        <FaPowerOff className="icon" size={20} color={'#86A3A6'} />
         </Link>
       ) : (
         <Link to="/login">

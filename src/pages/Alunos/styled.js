@@ -42,6 +42,12 @@ export const ProfilePicture = styled.div`
 `;
 
 export const NovoAluno = styled(Link)`
+  text-align: center;
+  color: black;
   display: block;
   padding: 20px 0 10px;
+
+  :hover{
+    color: ${props=>props.theme.colors.hoverStyle};
+  }
 `;

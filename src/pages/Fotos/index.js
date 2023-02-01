@@ -63,6 +63,11 @@ export default function Fotos({match}){
 
   }
 
+  function handleBack(e){
+    e.preventDefault();
+    history.goBack();
+  }
+
   return (
     <Container>
       <Loading isLoading={isLoading} />
@@ -73,6 +78,7 @@ export default function Fotos({match}){
           <input type='file' id='foto' onChange={handleChange}/>
         </label>
       </Form>
+      <button onClick={handleBack} type='submit'>Voltar</button>
     </Container>
   )
 }

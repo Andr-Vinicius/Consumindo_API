@@ -6,6 +6,7 @@ import { Container } from '../../styles/GlobalStyles';
 import Loading from '../../components/Loading';
 import {toast} from 'react-toastify';
 
+import history from '../../services/history';
 
 import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../../store/modules/auth/actions';
@@ -58,11 +59,16 @@ export default function Register(){
 
   }
 
+  function handleBack(e){
+    e.preventDefault();
+    history.goBack();
+  }
+
   return (
     <Container>
       <Loading isLoading={isLoading}/>
       <Title>{!id ? 'Crie a sua conta' : 'Edite sua conta'}</Title>
-      <Form onSubmit={handleSubmit}>
+      <Form autoComplete='on' onSubmit={handleSubmit}>
         <label htmlFor='nome'>
           Nome:
           <input 
@@ -88,8 +94,8 @@ export default function Register(){
             onChange={e => setPassword(e.target.value)}/>
         </label>
         <button type='submit'>Salvar</button>
-
       </Form>
+      <button onClick={handleBack} type='submit'>Voltar</button>
     </Container>
   )
 }

@@ -29,8 +29,10 @@ export default createGlobalStyle` // Estilo Global que está revestindo o App.js
 
 `;
 
+
+
 export const Container = styled.section`
-  max-width: 490px;
+  max-width: 500px;
   background-color: ${props => props.theme.colors.containerBackground};
   margin: 30px auto;
   padding: 30px;

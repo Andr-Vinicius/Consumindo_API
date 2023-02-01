@@ -140,6 +140,11 @@ export default function Aluno({match}){
 
   }
 
+  function handleBack(e){
+    e.preventDefault();
+    history.goBack();
+  }
+
   return (
     <Container>
       <Loading isLoading={isLoading}/>
@@ -156,7 +161,7 @@ export default function Aluno({match}){
           </Link>
         </ProfilePicture>
       )}
-      <Form onSubmit={handleSubmit}>
+      <Form autoComplete='on' onSubmit={handleSubmit}>
       <label htmlFor='nome'>
           Nome:
           <input 
@@ -207,6 +212,7 @@ export default function Aluno({match}){
         </label>
         <button type='submit'>Salvar</button>
       </Form>
+      <button onClick={handleBack} type='submit'>Voltar</button>
     </Container>
   )
 }
